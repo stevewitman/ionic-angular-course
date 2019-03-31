@@ -1,0 +1,9 @@
+{
+  "appId": "com.swudemycourse.ionicangular",
+  "appName": "ionic-angular-course",
+  "bundledWebRuntime": false,
+  "webDir": "www",
+  "server": {
+    "url": "http://10.0.0.55:8100"
+  }
+}
