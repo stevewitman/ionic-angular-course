@@ -27,7 +27,29 @@ export class PlacesService {
       '3 bedroom cabin',
       'http://lorempixel.com/400/200/city/?v=3',
       189.50
+    ),
+    new Place(
+      'p4',
+      'Village - Room 225',
+      'Next to The Gondola',
+      'http://lorempixel.com/400/200/city/?v=4',
+      199.90
+    ),
+    new Place(
+      'p5',
+      '1023 Elk Ranch Road',
+      'Amazing views',
+      'http://lorempixel.com/400/200/city/?v=5',
+      160
+    ),
+    new Place(
+      'p6',
+      '111 Main St',
+      'One bedroom',
+      'http://lorempixel.com/400/200/city/?v=6  ',
+      111
     )
+
   ];
 
   constructor() { }
