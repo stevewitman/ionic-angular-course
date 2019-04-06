@@ -55,28 +55,27 @@ export class PlaceDetailPage implements OnInit {
         }
       ]
     })
-.then(actionSheetEl => {
-  actionSheetEl.present();
-});
-
-    // this.modalCtrl
-    //   .create({
-    //     component: CreateBookingComponent,
-    //     componentProps: { selectedPlace: this.place }
-    //   })
-    //   .then(modalEl => {
-    //     modalEl.present();
-    //     return modalEl.onDidDismiss();
-    //   })
-    //   .then(resultData => {
-    //     console.log(resultData.data, resultData.role);
-    //     if (resultData.role === 'confirm') {
-    //       console.log('BOOKED!');
-    //     }
-    //   });
+    .then(actionSheetEl => {
+      actionSheetEl.present();
+    });
   }
 
   openBookingModal(mode: 'select' | 'random') {
     console.log(mode);
+    this.modalCtrl
+      .create({
+        component: CreateBookingComponent,
+        componentProps: { selectedPlace: this.place, selectedMode: mode }
+      })
+      .then(modalEl => {
+        modalEl.present();
+        return modalEl.onDidDismiss();
+      })
+      .then(resultData => {
+        console.log(resultData.data, resultData.role);
+        if (resultData.role === 'confirm') {
+          console.log('BOOKED!');
+        }
+      });
   }
 }
